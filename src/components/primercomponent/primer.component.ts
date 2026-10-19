@@ -6,11 +6,11 @@ import { Component } from "@angular/core";
     selector: "primer-component",
     standalone: false,
     //NO NECESITAMOS NI HTML NI CSS OBLIGATORIAMENTE
-    template: `
-        <h1>Holaaa</h1>
-        <h3 style="color: blue;">{{nombre}}</h3>
-        <h3 style="color: cadetblue;">{{year}}</h3>
-    `
+
+    //HTML
+    templateUrl: './primer.component.html',
+    //CSS
+    styleUrls:["./primer.component.css"]
 })
 
 //SIEMPRE DEBE TENER UNA CLASE
