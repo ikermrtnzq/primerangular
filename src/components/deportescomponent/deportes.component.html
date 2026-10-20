@@ -1,0 +1,46 @@
+<h1> DEPORTES</h1>
+
+<h2>Numero de deportes{{sports.length}}</h2>
+
+
+<ul>
+    @for (num of numbers; track num) {
+        <li [class.par] = "num%2 == 0" [class.impar] ="num%2 == 1">
+            {{num}}
+        </li>
+        <li [ngClass]="{
+            par : num % 2 == 0,
+            impar: num %2 == 1
+        }">{{num}}</li>
+    }
+</ul>
+@for (num of numbers; track num;let i=$index) {
+    <p [style.color] = "num % 2 == 0 ? 'green' : 'red'">{{num}}</p>
+}
+@if (sports.length < 5) {
+    <p style="color: green;">Hay más de 5 deportes</p>
+}@else{
+    <p style="color: red;">Hay menos de 5 deportes</p>
+}
+@for (sport of sports; track sport; let i=$index) {
+    <li>{{i}} - {{sport}}</li>
+}@empty {
+    <p style="color: red;">Array Vacio</p>
+}
+
+<div *ngIf="sports.length < 5; else condicionelse">
+    <p style="color: red;">Hay menos de 5 deportes</p>
+</div>
+<ng-container *ngTemplateOutlet="plantilla"></ng-container>
+<ng-template #plantilla>
+        <p style="color: green;">MUCHO CODIGO.....</p>
+</ng-template>
+
+<ng-template #condicionelse>
+        <p style="color: green;">Hay más de 5 deportes</p>
+</ng-template>
+<ul>
+    <li *ngFor="let deporte of sports">
+        {{deporte}}
+    </li>
+</ul>
