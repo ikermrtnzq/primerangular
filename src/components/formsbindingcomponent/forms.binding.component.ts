@@ -16,7 +16,7 @@ export class FormsComponent{
     public mensaje: string;
 
     recibirDatos() : void{
-        this.mensaje = "datos recibidos"
+        this.mensaje = "recibido"
     }
     constructor(){
         this.mensaje = "Manda los datos ";
