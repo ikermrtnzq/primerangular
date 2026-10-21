@@ -8,8 +8,10 @@ import { FormsModule } from '@angular/forms';
 import { FormsComponent } from '../components/formsbindingcomponent/forms.binding.component';
 import { SumarNumerosComponent } from '../components/sumarcomponent/sumar.numeros.component';
 import { CommonModule } from '@angular/common';
-import { Prueba } from './components/prueba/prueba';
-import { PruebaComponent } from './components/prueba-component/prueba-component';
+import { TablaMultiplicarComponent } from '../components/tabla-multiplicar-component/tabla-multiplicar-component';
+import { TablaMultiplicar2Component } from '../components/tabla-multiplicar2-component/tabla-multiplicar2-component';
+
+
 @NgModule({
   declarations: [
     App,
@@ -18,8 +20,9 @@ import { PruebaComponent } from './components/prueba-component/prueba-component'
     DeportesComponent,
     FormsComponent,
     SumarNumerosComponent,
-    Prueba,
-    PruebaComponent,
+    TablaMultiplicarComponent,
+    TablaMultiplicar2Component
+
   ],
   imports: [BrowserModule, FormsModule, CommonModule],
   providers: [provideBrowserGlobalErrorListeners()],
