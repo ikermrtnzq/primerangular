@@ -1,1 +1,11 @@
 <h1>Forms</h1>
+<h3>{{mensaje}}</h3>
+<form #idform="ngForm" (ngSubmit)="recibirDatos()">
+    <label for="nombre">Nombre: </label>
+    <input type="text"[(ngModel)]="user.nombre" #cajanombre>
+    <label for="nombre">Apellidos: </label>
+    <input type="text"[(ngModel)]="user.apellidos" #cajanombre>
+    <label for="nombre">Edad: </label>
+    <input type="text"[(ngModel)]="user.edad" #cajanombre>
+    <button></button>
+</form>

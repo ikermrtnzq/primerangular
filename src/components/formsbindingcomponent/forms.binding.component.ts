@@ -19,7 +19,7 @@ export class FormsComponent{
         this.mensaje = "datos recibidos"
     }
     constructor(){
-        this.mensaje = "hola";
+        this.mensaje = "Manda los datos ";
         this.user ={
             nombre: "",
             apellidos: "",
