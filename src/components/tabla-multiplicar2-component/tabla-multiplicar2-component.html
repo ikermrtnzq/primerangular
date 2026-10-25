@@ -1,0 +1,21 @@
+<h1>Tabla de Multiplcar Con OBJECT REFRENCE</h1>
+
+<form #tablaForm="ngForm" (ngSubmit)="recibirDatos()">
+    <label>Numero 1</label>
+    <input type="number" #cajanumero>
+    <button>Sumar</button>
+</form>
+<div style="display: flex; flex-direction: column;">
+    <div>
+        <ul>
+            @for (num of tabla; track $index; let i=$index) {
+                <li>{{num}}</li>
+            }
+        </ul>
+    </div>
+    <div>
+        @for (num of tabla; track $index; let i=$index) {
+            <li>{{this.cajanumero.nativeElement.value}}*{{i}} = {{num}}</li>
+        }
+    </div>
+</div>

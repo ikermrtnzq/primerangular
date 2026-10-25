@@ -1,0 +1,26 @@
+<h1>Tabla de Multiplcar Con Forms binding</h1>
+
+<form #formtabla="ngForm" (ngSubmit)="recibirDatos()">
+    <label>Numero </label>
+    <input type="number" [(ngModel)]="numero" name="cajaNum" #cajaNum="ngModel">
+    <button>
+        Enviar datos
+    </button>
+</form>
+<div style="display: flex; flex-direction: column;">
+    <div>
+        <ul>
+            @for (num of tabla; track $index; let i=$index) {
+                <li>{{num}}</li>
+            }
+        </ul>
+    </div>
+    <div>
+        @for (num of tabla; track $index; let i=$index) {
+            <li>{{numero}}*{{i}} = {{num}}</li>
+        }
+    </div>
+</div>
+
+
+<h3>{{mensaje}}</h3>
